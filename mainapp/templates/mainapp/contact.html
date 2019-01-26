@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+    {% extends 'mainapp/layout.html' %}
+    {% load staticfiles %}
+<html>
+<head>
+	<meta charset="utf-8">
+	 {% block title %}
+     {{ 'контакты'|title }}
+     {% endblock %}
+
+</head>
+<body>
+{{ request.path }}
+	<div class="container">
+         {% block content %}
+
+		<div class="hero">
+
+			<h1>наши контакты</h1>
+		</div>
+
+		<div class="location">
+			<div class="location-1">
+				<i class="fa fa-map-marker fa-5x"></i>
+				<h4>Москва</h4>
+				<div class="contacts">
+					<h5>Телефон</h5>
+					<p>+7-888-888-8888</p>
+				</div>
+				<div class="contacts">
+					<h5>Email</h5>
+					<p>info@geekshop.ru</p>
+				</div>
+				<div class="contacts">
+					<h5>Адрес</h5>
+					<p>В пределах МКАД</p>
+				</div>
+			</div>
+			<div class="location-1">
+				<i class="fa fa-map-marker fa-5x"></i>
+				<h4>Москва</h4>
+				<div class="contacts">
+					<h5>Телефон</h5>
+					<p>+7-888-888-8888</p>
+				</div>
+				<div class="contacts">
+					<h5>Email</h5>
+					<p>info@geekshop.ru</p>
+				</div>
+				<div class="contacts">
+					<h5>Адрес</h5>
+					<p>В пределах МКАД</p>
+				</div>
+			</div>
+			<div class="location-1">
+				<i class="fa fa-map-marker fa-5x"></i>
+				<h4>Москва</h4>
+				<div class="contacts">
+					<h5>Телефон</h5>
+					<p>+7-888-888-8888</p>
+				</div>
+				<div class="contacts">
+					<h5>Email</h5>
+					<p>info@geekshop.ru</p>
+				</div>
+				<div class="contacts">
+					<h5>Адрес</h5>
+					<p>В пределах МКАД</p>
+				</div>
+			</div>
+		</div>
+{% endblock %}
+		<div class="clr"></div>
+	</div>	
+
+
+			
+</body>
+</html>

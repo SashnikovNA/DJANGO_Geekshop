@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+        {% block title %}
+        {% endblock %}
+
+    </title>
+
+    {% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	<link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">
+    {% endblock %}
+
+    {% block js %}
+    {% endblock %}
+
+</head>
+<body>
+
+	<div class="container">
+        {% block Navigate_bar %}
+        <div class="header clearfix">
+				<a href="/" class="logo"></a>
+				<ul class="menu">
+					<li><a href="{% url 'main' %}" class="active">домой</a></li>
+					<li><a href="{% url 'catalog' %}">продукты</a></li>
+					<li><a href="{% url 'feedback' %}">контакты</a></li>
+				</ul>
+				 <a href="#" class="search"></a>
+        </div>
+        {% endblock %}
+
+        <div class="content">
+        {% block content %}
+        {% endblock %}
+        </div>
+
+		<div class="clr"></div>
+
+	</div>
+
+    {% block footer %}
+    <div class="footer">
+        <div class="clearfix">
+            <div class="text-footer">
+                <h3>контакты</h3>
+            </div>
+            <div class="text-footer">
+                <h3>полезная информация</h3>
+            </div>
+            <div class="text-footer clearfix">
+                <h3>Оставайтесь на связи</h3>
+                <p>Подписаться на новости и рассылки</p>
+                <form>
+                    <input type="email" name="email" placeholder="ваш email">
+                    <a href="#"><i class="fa fa-paper-plane fa-2x" aria-hidden="true"></i></a>
+                </form>
+            </div>
+        </div>
+        <p class="small">&copy;GB {% now "Y" %}</p>
+        <div class="social">
+            <a href="#" class="social1"></a>
+            <a href="#" class="social2"></a>
+            <a href="#" class="social3"></a>
+            <a href="#" class="social4"></a>
+        </div>
+        <p class="small">Положения &amp; Условия  /  Конфиденциальность &amp; Cookies</p>
+    </div>
+    {% endblock %}
+
+</body>
+</html>

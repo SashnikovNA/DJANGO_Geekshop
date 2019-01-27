@@ -1,15 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpRequest
+from .models import ProductCategory, Product
+
 
 # Create your views here.
 def index(request: HttpRequest):
-    users = [
-        {'name': 'John', 'age': 10},
-        {'name': 'Artur', 'age': 20},
-        {'name': 'David', 'age': 30},
-    ]
-
-    return render(request, 'mainapp/index.html', {'data': users})
+    title = 'главная'
+    products = Product.objects.all()[:4]
+    content = {'title': title, 'products': products}
+    return render(request, 'mainapp/index.html', content)
 
 def products(request: HttpRequest):
     return render(request, 'mainapp/products.html')

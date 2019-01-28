@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<title>
 		 {% block title %}
-         {{ 'title'|title }}
+         {{ главная|title }}
 		{% endblock %}
 	</title>
 
@@ -20,18 +20,7 @@
 
 	<div class="container">
 		{% block content %}
-        {% for product in products %}
-  <div class="block">
-    <a href="#">
-      <img src="/media/{{ product.image }}" alt="{{ product.short_desc }}">
-      <div class="text">
-        <h3>{{ product.category.name }}</h3>
-        <h4>{{ product.name }}</h4>
-        <p>{{ product.description }}</p>
-      </div>
-    </a>
-  </div>
-{% endfor %}
+
         <div class="slider">
 
 			<div class="text-slider">
